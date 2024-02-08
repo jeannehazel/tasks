@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priority-based Task Manager</title>
+<style>
+    .high { color: red; }
+    .medium { color: orange; }
+    .low { color: green; }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th, td{
+        background-color: bisque;
+    }
+    th{
+        background-color: beige;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>Priority-based Task Manager</h1>
+
+<form id="taskForm">
+    <input type="text" id="taskName" placeholder="Task Name">
+    <select id="priority">
+        <option value="high">High Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="low">Low Priority</option>
+    </select>
+    <button type="button" onclick="addTask()">Add Task</button>
+</form>
+
+<table id="taskTable">
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Priority</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody id="taskTableBody"></tbody>
+</table>
+<script src="tasks.js"></script>
+
+</body>
+</html>
